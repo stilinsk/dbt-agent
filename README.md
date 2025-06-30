@@ -1,5 +1,5 @@
 # dbt-agent
-SALES.RAW.ORDERS-- Use admin role
+```
 USE ROLE ACCOUNTADMIN;
 
 -- Create the `data` role
@@ -42,13 +42,7 @@ USE SCHEMA RAW;
 USE DATABASE SALES;
 USE SCHEMA RAW;
 
--- Drop existing tables
-DROP TABLE IF EXISTS SALES.RAW.Orders;
-DROP TABLE IF EXISTS SALES.RAW.Products;
-DROP TABLE IF EXISTS SALES.RAW.Customers;
-DROP TABLE IF EXISTS SALES.RAW.Reviews;
-DROP TABLE IF EXISTS SALES.RAW.Social_Media;
-DROP TABLE IF EXISTS SALES.RAW.Web_Logs;
+
 
 -- Orders table
 CREATE OR REPLACE TABLE SALES.RAW.Orders (
@@ -103,3 +97,4 @@ CREATE OR REPLACE TABLE SALES.RAW.Web_Logs (
     page STRING,
     action STRING
 );
+```
